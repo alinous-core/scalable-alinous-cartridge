@@ -39,9 +39,6 @@ Group-Overrides:
   - components:
     - "tomcat-8.0"
     - web_proxy
-Configure-Order:
-   - postgresql
-   - alinous
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: HTTP_PORT
