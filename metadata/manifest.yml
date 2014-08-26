@@ -29,7 +29,7 @@ Subscribes:
     Required: false
   set-postgres-connection-info:
     Type: "NET_TCP:db:postgres"
-    Required : true
+    Required : false
   set-nosql-db-connection-info:
     Type: "NET_TCP:nosqldb:connection-info"
     Required: false
