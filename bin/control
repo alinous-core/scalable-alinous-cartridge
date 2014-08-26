@@ -60,7 +60,13 @@ function checkRunning() {
 
 
 function start() {
+    client_message "before init db"    
     
+    if [ -z "$OPENSHIFT_POSTGRESQL_DB_USERNAME" ]; then
+         client_message "OPENSHIFT_POSTGRESQL_DB_USERNAME is not set";
+         return 0
+    fi
+
     ${OPENSHIFT_ALINOUS_DIR}/bin/initdb
     
     client_message "Start tomcat and alinous server";
