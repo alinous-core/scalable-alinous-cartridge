@@ -1,10 +1,12 @@
-
 #!/bin/bash
 
 # Exit on any errors
 set -e
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+echo $4 > test.txt
+
 
 list=
 kvargs=$(echo "${@:4}" | tr -d "\n" )
